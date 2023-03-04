@@ -1,8 +1,6 @@
 "use strict";
 
 const categories = document.querySelector('#categories');
-// console.log(categories);
-console.log(categories.children);
 
 // Counter categories
 const counterCategories = categories.children.length;
