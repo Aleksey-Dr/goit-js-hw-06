@@ -1,21 +1,16 @@
-"use strict";
-
 const form = document.querySelector('.login-form');
 
 form.addEventListener('submit', (event) => {
     event.preventDefault();
 
-    const email = event.currentTarget.email.value;
-    const password = event.currentTarget.password.value;
+    const {
+        elements: { email,
+            password, }
+    } = event.currentTarget;
     
-    email === '' || password === '' ?
+    email.value === '' || password.value === '' ?
         alert('Please, fill in form fields') :
-        console.log(`Login: ${email}, Password: ${password}`);
-    
-    const formData = {
-        email,
-        password,
-    }
+        console.log(`Login: ${email.value}, Password: ${password.value}`);
     
     event.currentTarget.reset();
 });
